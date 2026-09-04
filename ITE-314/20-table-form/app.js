@@ -3,7 +3,9 @@ import express from "express"
 const server = express()
 
 server.set("views engine", "ejs")
+
 server.use(express.json())
+server.use(express.static("public"))
 
 server.get("/", (req, res) => {
     res.send("Hello world")
