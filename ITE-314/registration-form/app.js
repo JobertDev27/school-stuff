@@ -29,6 +29,25 @@ const query = `INSERT INTO boardmates VALUES( 0, '${fname}', '${lname}', '${addr
     })
 })
 
+app.get('/login', (req, res) => {
+    res.render('login')
+})
+
+app.post('/get-account', (req, res) => {
+    const email = req.body.email
+    const pass = req.body.pass
+
+    const query = `SELECT * FROM boardmates WHERE email = '${email}' AND pass = '${pass}';`
+    conn.query(query, (err, result) => {
+	if (err) throw err;
+	if (result.length > 0) {
+	    res.send(`<script>alert("login successfully"); window.location.href="/";</script>`)
+	} else {
+	 res.send(`<script>alert("Wrong credentials"); window.location.href="login";</script>`)
+	}
+    })
+})
+
 app.listen(4000, () => {
     console.log('Server live on port: 4000')
 })
