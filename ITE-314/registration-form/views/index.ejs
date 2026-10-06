@@ -8,12 +8,31 @@
 </head>
 <body>
 <form method="POST" action="/register">
-<input type="text" name="fname" placeholder="fname" /> </p>
-<input type="text" name="lname" placeholder="lname" /> </p>
-<input type="text" name="address" placeholder="address" /> </p>
-<input type="text" name="email" placeholder="email" /> </p>
-<input type="text" name="pass" placeholder="pass" /> </p>
-<input type="text" name="cnumber" placeholder="cnumber" /> </p>
+<div>
+    <label>First Name:</label>
+    <input type="text" name="fname" placeholder="fname" required /> 
+</div>
+<div>
+    <label>Last Name:</label>
+    <input type="text" name="lname" placeholder="lname" required /> 
+</div>
+<div>
+    <label>Email Address:</label>
+    <input type="email" name="email" placeholder="email" required /> 
+</div>
+<div>
+    <label>Current Address:</label>
+    <input type="text" name="address" placeholder="address" required /> 
+</div>
+<div>
+    <label>Password:</label>
+    <input type="password" name="pass" placeholder="pass" required /> 
+</div>
+<div>
+    <label>Contact Number:</label>
+    <input type="number" name="cnumber" placeholder="cnumber" required /> 
+</div>
+<a href="/login">Already have an Account? Login</a> 
 <button type="submit">submit</button>
 </form>
 </body>
