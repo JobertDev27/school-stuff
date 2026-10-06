@@ -1,8 +1,23 @@
 body {
-    background-color: black;
+    width: 100dvw;
+    height: 100dvh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
 }
 
-p {
-    color: white;
+form {
+    display: flex;
+    flex-direction: column;
 }
+
+form div {
+    display: flex;
+    flex-direction: column;
+}
+
+input, button {
+    width: fit-content;
+}
+
 
