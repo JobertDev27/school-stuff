@@ -9,6 +9,12 @@ body {
 form {
     display: flex;
     flex-direction: column;
+    gap: 5px;
+}
+
+form a {
+    margin-top: 10px;
+    margin-bottom: 5px;
 }
 
 form div {
